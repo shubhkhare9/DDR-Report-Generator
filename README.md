@@ -39,7 +39,7 @@ venv\Scripts\activate           # Windows
 pip install -r requirements.txt
 ```
 
-### 4. Get an Anthropic API Key
+### 4. Get an Anthropic API Key (Optional - API key is auto-loaded)
 - Go to https://console.groq.com/
 - Create an API key
 - You'll enter it in the app's sidebar
@@ -58,7 +58,7 @@ Open your browser at **https://ddr-report-generator-9elnwp4yj66fx9tljuptu2.strea
 
 ## 📋 How to Use
 
-1. **Enter your Anthropic API key** in the sidebar
+1. **API key is auto-loaded from secrets** in the sidebar
 2. **Upload Inspection Report PDF** (site photos, checklists, observations)
 3. **Upload Thermal Report PDF** (thermal camera images + temperature data)
 4. Click **🚀 Generate DDR Report**
@@ -88,7 +88,7 @@ Open your browser at **https://ddr-report-generator-9elnwp4yj66fx9tljuptu2.strea
 |-----------|------------|
 | UI | Streamlit |
 | PDF Extraction | PyMuPDF (fitz) |
-| AI Model | Claude claude-opus-4-5 (Anthropic) |
+| AI Model | LLaMA 3.3 70B via Groq API |
 | Word Output | python-docx |
 | PDF Output | ReportLab |
 
@@ -120,4 +120,4 @@ Open your browser at **https://ddr-report-generator-9elnwp4yj66fx9tljuptu2.strea
 - Custom branding / logo in reports
 - Historical report comparison
 - WhatsApp / email delivery integration
-# DDR-Report-Generator
+
