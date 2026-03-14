@@ -40,7 +40,7 @@ pip install -r requirements.txt
 ```
 
 ### 4. Get an Anthropic API Key
-- Go to https://console.anthropic.com
+- Go to https://console.groq.com/
 - Create an API key
 - You'll enter it in the app's sidebar
 
@@ -52,7 +52,7 @@ pip install -r requirements.txt
 streamlit run app.py
 ```
 
-Open your browser at **http://localhost:8501**
+Open your browser at **https://ddr-report-generator-9elnwp4yj66fx9tljuptu2.streamlit.app/**
 
 ---
 
