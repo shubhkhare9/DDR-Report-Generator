@@ -64,12 +64,24 @@ st.markdown("""
 # ─────────────────────────────────────────────────────────────────────────────
 with st.sidebar:
     st.markdown("## ⚙️ Configuration")
-    api_key = st.text_input(
-        "Groq API Key",
-        type="password",
-        placeholder="gsk_...",
-        help="Free API key from console.groq.com",
-    )
+
+    # Auto-load API key from Streamlit secrets if deployed on Streamlit Cloud
+    secret_api_key = ""
+    try:
+        secret_api_key = st.secrets["GROQ_API_KEY"]
+    except Exception:
+        pass
+
+    if secret_api_key:
+        api_key = secret_api_key
+        st.success("🔑 API Key loaded automatically")
+    else:
+        api_key = st.text_input(
+            "Groq API Key",
+            type="password",
+            placeholder="gsk_...",
+            help="Free API key from console.groq.com",
+        )
     st.markdown("---")
     st.markdown("""
 ### 📌 How It Works
